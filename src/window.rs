@@ -1,5 +1,5 @@
-use {chtype, curses, platform_specific, ptr, Input, ToChtype, ERR};
 use std::ffi::CString;
+use {chtype, curses, platform_specific, ptr, Input, ToChtype, ERR};
 
 #[derive(Debug)]
 pub struct Window {
@@ -29,8 +29,8 @@ impl Window {
     ///
     /// The functionality is similar to calling window.addch() once for each character in the
     /// string.
-	pub fn addstr<T: AsRef<str>>(&self, string: T) -> i32 {
-		let s = CString::new(string.as_ref()).unwrap();
+    pub fn addstr<T: AsRef<str>>(&self, string: T) -> i32 {
+        let s = CString::new(string.as_ref()).unwrap();
         unsafe { curses::waddstr(self._window, s.as_ptr()) }
     }
 
@@ -497,10 +497,21 @@ impl Window {
         unsafe { curses::wrefresh(self._window) }
     }
 
+    /// scroll() causes the window to scroll up one line.
+    pub fn scroll(&self) -> i32 {
+        unsafe { curses::scroll(self._window) }
+    }
+
     /// If enabled and a scrolling region is set with setscrreg(), any attempt to move off
     /// the bottom margin will cause all lines in the scrolling region to scroll up one line.
     pub fn scrollok(&self, bf: bool) -> i32 {
         unsafe { curses::scrollok(self._window, bf as u8) }
+    }
+
+    /// With a positive n, scrl() scrolls the window up n lines (line i + n becomes i);
+    /// otherwise they scroll the window down n lines.
+    pub fn scrl(&self, n: i32) -> i32 {
+        unsafe { curses::wscrl(self._window, n) }
     }
 
     /// Sets a scrolling region in a window.
