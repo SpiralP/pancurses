@@ -1,0 +1,10 @@
+(function() {var implementors = {};
+implementors["pancurses"] = [{text:"impl <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/convert/trait.From.html\" title=\"trait core::convert::From\">From</a>&lt;<a class=\"enum\" href=\"pancurses/enum.Attribute.html\" title=\"enum pancurses::Attribute\">Attribute</a>&gt; for <a class=\"struct\" href=\"pancurses/struct.Attributes.html\" title=\"struct pancurses::Attributes\">Attributes</a>",synthetic:false,types:["pancurses::attributes::Attributes"]},{text:"impl <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/convert/trait.From.html\" title=\"trait core::convert::From\">From</a>&lt;<a class=\"enum\" href=\"pancurses/enum.Attribute.html\" title=\"enum pancurses::Attribute\">Attribute</a>&gt; for <a class=\"type\" href=\"pancurses/type.chtype.html\" title=\"type pancurses::chtype\">chtype</a>",synthetic:false,types:["ncurses::ll::chtype"]},{text:"impl <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/convert/trait.From.html\" title=\"trait core::convert::From\">From</a>&lt;<a class=\"struct\" href=\"pancurses/struct.Attributes.html\" title=\"struct pancurses::Attributes\">Attributes</a>&gt; for <a class=\"type\" href=\"pancurses/type.chtype.html\" title=\"type pancurses::chtype\">chtype</a>",synthetic:false,types:["ncurses::ll::chtype"]},{text:"impl <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/convert/trait.From.html\" title=\"trait core::convert::From\">From</a>&lt;<a class=\"struct\" href=\"pancurses/colorpair/struct.ColorPair.html\" title=\"struct pancurses::colorpair::ColorPair\">ColorPair</a>&gt; for <a class=\"type\" href=\"pancurses/type.chtype.html\" title=\"type pancurses::chtype\">chtype</a>",synthetic:false,types:["ncurses::ll::chtype"]},];
+
+            if (window.register_implementors) {
+                window.register_implementors(implementors);
+            } else {
+                window.pending_implementors = implementors;
+            }
+        
+})()
